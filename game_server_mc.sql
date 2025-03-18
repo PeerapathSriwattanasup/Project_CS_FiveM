@@ -15,15 +15,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping data for table game_server.addon_account: ~5 rows (approximately)
-REPLACE INTO `addon_account` (`name`, `label`, `shared`) VALUES
+INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
 	('society_police', 'Police', 1),
 	('society_police_black_money', 'Police', 1),
 	('society_police_money', 'Police', 1),
 	('vault_black_money', 'BlackMoney Vault', 0),
 	('vault_money', 'Money Vault', 0);
 
--- Dumping data for table game_server.addon_account_data: ~14 rows (approximately)
-REPLACE INTO `addon_account_data` (`id`, `account_name`, `money`, `owner`) VALUES
+-- Dumping data for table game_server.addon_account_data: ~15 rows (approximately)
+INSERT INTO `addon_account_data` (`id`, `account_name`, `money`, `owner`) VALUES
 	(1, 'society_police_black_money', 0, NULL),
 	(2, 'society_police_money', 1569484, NULL),
 	(3, 'society_police', 0, NULL),
@@ -41,7 +41,7 @@ REPLACE INTO `addon_account_data` (`id`, `account_name`, `money`, `owner`) VALUE
 	(2980, 'vault_black_money', 0, 'steam:11000015cfe68ef');
 
 -- Dumping data for table game_server.addon_inventory: ~2 rows (approximately)
-REPLACE INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
+INSERT INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
 	('society_police', 'Police', 1),
 	('vault', 'Vault', 0);
 
@@ -62,7 +62,7 @@ REPLACE INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
 -- Dumping data for table game_server.crew_phone_news: ~0 rows (approximately)
 
 -- Dumping data for table game_server.datastore: ~16 rows (approximately)
-REPLACE INTO `datastore` (`name`, `label`, `shared`) VALUES
+INSERT INTO `datastore` (`name`, `label`, `shared`) VALUES
 	('society_ambulance', 'Ambulance', 1),
 	('society_police', 'Police', 1),
 	('user_ears', 'Ears', 0),
@@ -81,7 +81,7 @@ REPLACE INTO `datastore` (`name`, `label`, `shared`) VALUES
 	('user_cloth', 'Cloth', 0);
 
 -- Dumping data for table game_server.datastore_data: ~38 rows (approximately)
-REPLACE INTO `datastore_data` (`id`, `name`, `owner`, `data`) VALUES
+INSERT INTO `datastore_data` (`id`, `name`, `owner`, `data`) VALUES
 	(1, 'society_ambulance', NULL, '{}'),
 	(2, 'society_police', NULL, '{"weapons":[{"name":"WEAPON_SWITCHBLADELV1","count":0}]}'),
 	(3762, 'vault', 'steam:11000010e913b4f', '{}'),
@@ -122,7 +122,7 @@ REPLACE INTO `datastore_data` (`id`, `name`, `owner`, `data`) VALUES
 	(3797, 'user_glasses', 'steam:11000015cfe68ef', '{}');
 
 -- Dumping data for table game_server.items: ~53 rows (approximately)
-REPLACE INTO `items` (`name`, `label`, `weight`, `limit`, `rare`, `can_remove`) VALUES
+INSERT INTO `items` (`name`, `label`, `weight`, `limit`, `rare`, `can_remove`) VALUES
 	('car_repair', 'อุปกรณ์ซ่อมรถ', 0, 10, 0, 1),
 	('fish_mackerel', 'ปลาแม็คเคเรลส์', 0, 50, 0, 1),
 	('fish_pike', 'ปลาไพค์', 0, 50, 0, 1),
@@ -178,7 +178,7 @@ REPLACE INTO `items` (`name`, `label`, `weight`, `limit`, `rare`, `can_remove`) 
 	('reskin', 'บัตรศัลยกรรม', 0, 1, 0, 1);
 
 -- Dumping data for table game_server.jobs: ~10 rows (approximately)
-REPLACE INTO `jobs` (`name`, `label`) VALUES
+INSERT INTO `jobs` (`name`, `label`) VALUES
 	('admin', 'admin'),
 	('ambulance', 'หมอ'),
 	('bu', 'บรูณพนธ์'),
@@ -191,7 +191,7 @@ REPLACE INTO `jobs` (`name`, `label`) VALUES
 	('unemployed', 'ไม่มีโรงเรียน');
 
 -- Dumping data for table game_server.job_grades: ~38 rows (approximately)
-REPLACE INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
 	(1, 'unemployed', 0, 'unemployed', 'ไม่มีโรงเรียน', 0, '{}', '{}'),
 	(10, 'police', 0, 'recruit', 'นักเรียนตำรวจ', 400, '{}', '{}'),
 	(11, 'police', 1, 'officer', 'จ่า', 600, '{}', '{}'),
@@ -232,7 +232,7 @@ REPLACE INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`,
 	(999, 'admin', 0, 'admin', 'แอดมิน', 0, '', '');
 
 -- Dumping data for table game_server.licenses: ~8 rows (approximately)
-REPLACE INTO `licenses` (`type`, `label`) VALUES
+INSERT INTO `licenses` (`type`, `label`) VALUES
 	('aircraft', 'Aircraft License'),
 	('boating', 'Boating License'),
 	('dmv', 'Driving Permit'),
@@ -246,8 +246,8 @@ REPLACE INTO `licenses` (`type`, `label`) VALUES
 
 -- Dumping data for table game_server.owned_properties: ~0 rows (approximately)
 
--- Dumping data for table game_server.owned_vehicles: ~14 rows (approximately)
-REPLACE INTO `owned_vehicles` (`owner`, `plate`, `vehicle`, `type`, `job`, `buyer`, `stored`, `health_vehicles`, `police`, `police_by`, `time`) VALUES
+-- Dumping data for table game_server.owned_vehicles: ~18 rows (approximately)
+INSERT INTO `owned_vehicles` (`owner`, `plate`, `vehicle`, `type`, `job`, `buyer`, `stored`, `health_vehicles`, `police`, `police_by`, `time`) VALUES
 	('steam:110000165bbf923', 'DDL 528', '{"model":1672195559,"plate":"DDL 528"}', 'car', '', NULL, 1, '{"tyres":[false,false,false,false,false,false,false],"windows":[1,1,1,false,false,1,1,1,1,1,1,false,false],"health_engine":1000.0,"health_body":1000.0,"health_tank":65.0,"doors":[false,false,false,false,false,false]}', 0, NULL, NULL),
 	('steam:11000010b2ce15c', 'DEN 496', '{"model":1672195559,"plate":"DEN 496"}', 'car', '', NULL, 1, '{"tyres":[false,false,false,false,false,false,false],"windows":[1,1,1,false,false,1,1,1,1,1,1,false,false],"health_engine":1000.0,"health_body":1000.0,"health_tank":65.0,"doors":[false,false,false,false,false,false]}', 0, NULL, NULL),
 	('steam:11000010e913b4f', 'EZF 774', '{"modSeats":-1,"modEngine":-1,"modFrontBumper":-1,"modOrnaments":-1,"modGrille":-1,"bodyHealth":1000.0,"modPlateHolder":-1,"modFrame":-1,"modSteeringWheel":-1,"wheelColor":156,"color2Custom":[245,137,15],"modSpoilers":-1,"tyreSmokeColor":[255,255,255],"modTrunk":-1,"modTrimB":-1,"pearlescentColor":88,"modSuspension":-1,"modArchCover":-1,"neonEnabled":[false,false,false,false],"modAerials":-1,"modRearBumper":-1,"modSpeakers":-1,"modArmor":-1,"modRoof":-1,"modHood":-1,"modTurbo":0,"color1Custom":[245,137,15],"modBackWheels":-1,"color2":0,"plateIndex":3,"livery":-1,"extras":{"1":1,"4":1,"9":1},"modDial":-1,"windowTint":-1,"modAPlate":-1,"modSmokeEnabled":false,"modVanityPlate":-1,"color2Type":0,"modTrimA":-1,"modFender":-1,"wheels":6,"modDoorSpeaker":-1,"modAirFilter":-1,"modHydrolic":-1,"modXenon":255,"modRightFender":-1,"modHorns":-1,"modStruts":-1,"color1":0,"plate":"EZF 774","fuelLevel":65.0,"neonColor":[255,0,255],"color1Type":0,"dirtLevel":1.7,"modWindows":-1,"modDashboard":-1,"modEngineBlock":-1,"modSideSkirt":-1,"modExhaust":-1,"modLivery":-1,"engineHealth":1000.0,"modTransmission":-1,"modBrakes":-1,"modFrontWheels":-1,"modTank":-1,"modShifterLeavers":-1,"model":1672195559}', 'car', '', NULL, 1, '{"fuel":65.0,"tyres":[false,false,false,false,false,false,false],"health_engine":1000.0,"doors":[false,false,false,false,false,false],"health_body":1000.0}', 0, NULL, NULL),
@@ -288,7 +288,7 @@ REPLACE INTO `owned_vehicles` (`owner`, `plate`, `vehicle`, `type`, `job`, `buye
 -- Dumping data for table game_server.twitter_tweets: ~0 rows (approximately)
 
 -- Dumping data for table game_server.users: ~21 rows (approximately)
-REPLACE INTO `users` (`identifier`, `name`, `group`, `accounts`, `inventory`, `job`, `job_grade`, `loadout`, `position`, `status`, `skin`, `is_dead`, `last_property`, `firstname`, `lastname`, `dateofbirth`, `sex`, `height`, `phone_number`, `crypto`, `tattoos`, `jail`, `animations`) VALUES
+INSERT INTO `users` (`identifier`, `name`, `group`, `accounts`, `inventory`, `job`, `job_grade`, `loadout`, `position`, `status`, `skin`, `is_dead`, `last_property`, `firstname`, `lastname`, `dateofbirth`, `sex`, `height`, `phone_number`, `crypto`, `tattoos`, `jail`, `animations`) VALUES
 	('steam:1100001090680f8', 'Qielystyles', 'user', '{"bank":14000,"black_money":0,"money":44187}', '{"painkiller":33,"reskin":4,"fish_tuna":5,"job_egg":9,"item_rod":2,"fish_shark":3,"job_mushroom":6,"phone":1,"item_toe":2,"job_pig":5,"i_oloil":25,"item_hand":3,"item_silk":3,"i_wagil":45,"car_repair":2}', 'unemployed', 0, '[]', '{"heading":15.4,"z":600.2,"y":-1200.9,"x":780.5}', NULL, '{"makeup_3":0,"beard_1":0,"torso_2":0,"hair_1":46,"glasses_2":0,"eye_color":0,"lipstick_1":0,"complexion_1":0,"age_2":0,"helmet_2":0,"bags_1":0,"eyebrows_1":0,"arms_2":0,"makeup_4":0,"chain_2":0,"eyebrows_3":0,"chest_3":0,"age_1":0,"lipstick_4":0,"decals_2":0,"tshirt_2":0,"complexion_2":0,"bracelets_1":-1,"beard_2":0,"decals_1":0,"eyebrows_4":0,"hair_color_1":19,"chest_2":0,"beard_3":0,"torso_1":81,"shoes_2":0,"hair_color_2":0,"bproof_1":0,"ears_2":0,"watches_2":0,"face":26,"bracelets_2":0,"hair_2":0,"bproof_2":0,"blush_1":0,"shoes_1":0,"blemishes_1":0,"sun_1":0,"ears_1":-1,"skin":0,"lipstick_3":0,"helmet_1":-1,"bags_2":0,"blush_3":0,"chain_1":0,"makeup_1":0,"arms":0,"blemishes_2":0,"bodyb_1":0,"mask_1":0,"watches_1":-1,"moles_1":0,"sun_2":0,"lipstick_2":0,"pants_2":0,"blush_2":0,"chest_1":0,"eyebrows_2":0,"moles_2":0,"mask_2":0,"beard_4":0,"makeup_2":0,"sex":0,"bodyb_2":0,"tshirt_1":15,"pants_1":0,"glasses_1":0}', 0, NULL, 'Sing', 'Resist', '08/02/2000', 'm', 169, NULL, '{"bitcoin": 0, "ethereum": 0, "bitcoin-cash": 0, "bitcoin-sv": 0, "litecoin": 0, "binance-coin": 0, "monero": 0, "dash": 0, "zcash": 0, "maker": 0}', NULL, 0, NULL),
 	('steam:11000010941672f', 'Chucky', 'user', '{"bank":21000,"black_money":0,"money":40981}', '{"painkiller":28,"reskin":2,"fish_tuna":2,"job_egg":7,"item_rod":1,"fish_shark":2,"job_mushroom":4,"phone":1,"item_toe":2,"job_pig":3,"i_oloil":22,"item_hand":2,"item_silk":2,"i_wagil":33,"car_repair":1}', 'unemployed', 0, '[]', '{"heading":255.7,"z":25.0,"y":2100.3,"x":-1900.8}', NULL, '{"makeup_3":0,"beard_1":0,"torso_2":0,"hair_1":46,"glasses_2":0,"eye_color":0,"lipstick_1":0,"complexion_1":0,"age_2":0,"helmet_2":0,"bags_1":0,"eyebrows_1":0,"arms_2":0,"makeup_4":0,"chain_2":0,"eyebrows_3":0,"chest_3":0,"age_1":0,"lipstick_4":0,"decals_2":0,"tshirt_2":0,"complexion_2":0,"bracelets_1":-1,"beard_2":0,"decals_1":0,"eyebrows_4":0,"hair_color_1":19,"chest_2":0,"beard_3":0,"torso_1":81,"shoes_2":0,"hair_color_2":0,"bproof_1":0,"ears_2":0,"watches_2":0,"face":26,"bracelets_2":0,"hair_2":0,"bproof_2":0,"blush_1":0,"shoes_1":0,"blemishes_1":0,"sun_1":0,"ears_1":-1,"skin":0,"lipstick_3":0,"helmet_1":-1,"bags_2":0,"blush_3":0,"chain_1":0,"makeup_1":0,"arms":0,"blemishes_2":0,"bodyb_1":0,"mask_1":0,"watches_1":-1,"moles_1":0,"sun_2":0,"lipstick_2":0,"pants_2":0,"blush_2":0,"chest_1":0,"eyebrows_2":0,"moles_2":0,"mask_2":0,"beard_4":0,"makeup_2":0,"sex":0,"bodyb_2":0,"tshirt_1":15,"pants_1":0,"glasses_1":0}', 0, NULL, 'Seven', 'Knight', '18/05/2002', 'm', 189, NULL, '{"bitcoin": 0, "ethereum": 0, "bitcoin-cash": 0, "bitcoin-sv": 0, "litecoin": 0, "binance-coin": 0, "monero": 0, "dash": 0, "zcash": 0, "maker": 0}', NULL, 0, NULL),
 	('steam:11000010ac49b3e', 'Genta Yue', 'user', '{"bank":27000,"black_money":0,"money":57812}', '{"painkiller":50,"reskin":5,"fish_tuna":6,"job_egg":12,"item_rod":3,"fish_shark":5,"job_mushroom":8,"phone":1,"item_toe":3,"job_pig":7,"i_oloil":40,"item_hand":5,"item_silk":6,"i_wagil":60,"car_repair":4}', 'unemployed', 0, '[]', '{"heading":270.0,"z":50.6,"y":2100.2,"x":-1700.8}', NULL, '{"makeup_3":1,"beard_1":2,"torso_2":0,"hair_1":38,"glasses_2":1,"eye_color":3,"lipstick_1":1,"complexion_1":2,"age_2":0,"helmet_2":1,"bags_1":2,"eyebrows_1":3,"arms_2":1,"makeup_4":0,"chain_2":2,"eyebrows_3":1,"chest_3":1,"age_1":2,"lipstick_4":0,"decals_2":1,"tshirt_2":1,"complexion_2":0,"bracelets_1":-1,"beard_2":2,"decals_1":1,"eyebrows_4":0,"hair_color_1":15,"chest_2":1,"beard_3":2,"torso_1":75,"shoes_2":1,"hair_color_2":2,"bproof_1":0,"ears_2":1,"watches_2":1,"face":29,"bracelets_2":2,"hair_2":1,"bproof_2":0,"blush_1":2,"shoes_1":2,"blemishes_1":0,"sun_1":1,"ears_1":-1,"skin":1,"lipstick_3":1,"helmet_1":-1,"bags_2":2,"blush_3":1,"chain_1":1,"makeup_1":1,"arms":1,"blemishes_2":0,"bodyb_1":2,"mask_1":1,"watches_1":-1,"moles_1":1,"sun_2":1,"lipstick_2":0,"pants_2":1,"blush_2":1,"chest_1":1,"eyebrows_2":2,"moles_2":1,"mask_2":0,"beard_4":2,"makeup_2":1,"sex":0,"bodyb_2":0,"tshirt_1":12,"pants_1":2,"glasses_1":1}', 0, NULL, 'Arai', 'Wa', '17/11/2003', 'm', 171, NULL, '{"bitcoin": 0, "ethereum": 0, "bitcoin-cash": 0, "bitcoin-sv": 0, "litecoin": 0, "binance-coin": 0, "monero": 0, "dash": 0, "zcash": 0, "maker": 0}', NULL, 0, NULL),
@@ -321,8 +321,8 @@ REPLACE INTO `users` (`identifier`, `name`, `group`, `accounts`, `inventory`, `j
 
 -- Dumping data for table game_server.xmarket_players: ~0 rows (approximately)
 
--- Dumping data for table game_server.xzero_trunk: ~0 rows (approximately)
-REPLACE INTO `xzero_trunk` (`plate`, `is_owner`, `accounts`, `items`, `weapons`, `time_last_update`) VALUES
+-- Dumping data for table game_server.xzero_trunk: ~1 rows (approximately)
+INSERT INTO `xzero_trunk` (`plate`, `is_owner`, `accounts`, `items`, `weapons`, `time_last_update`) VALUES
 	('NSI 315', 1, '{}', '{}', '{}', '2025-03-17 17:45:10');
 
 -- Dumping data for table game_server.yellowpages_posts: ~0 rows (approximately)
